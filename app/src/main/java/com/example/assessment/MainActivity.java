@@ -18,8 +18,6 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
-
-
         Button btn_next = (Button) findViewById(R.id.btn_next);
         btn_next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(login_intent);
             }
         });
+
+
     }
 }
 

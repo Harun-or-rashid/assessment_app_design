@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.view.ViewCompat;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -24,6 +25,15 @@ CardView big_card;
         cardView.setBackgroundResource(R.drawable.big_card_bg_radius);
         ViewCompat.setElevation(findViewById(R.id.imageView2),big_card.getElevation() * 2);
 
+        Button submit = (Button) findViewById(R.id.btn_submit);
+
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(LoginActivity.this,Home.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
